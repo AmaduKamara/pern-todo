@@ -21,11 +21,19 @@ app.post("/todos", async (req, res) => {
     );
     res.status(201).json(newTodo.rows[0]);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 });
 
 // GET all todos
+app.get("/todos", async (req, res) => {
+  try {
+    const allTodos = await pool.query("SELECT * FROM todos");
+    res.json(allTodos.rows);
+  } catch (error) {
+    console.log(error.message);
+  }
+});
 
 // GET a todo
 
