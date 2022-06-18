@@ -1,3 +1,3 @@
 # PERN Todo App
 
-> The beginning of using Postgress and Node to build a toto api and a react frontend with MongoDB database.
+> This is the backend API for the [PERM React](https://github.com/AmaduKamara/react-pern-todo) Frontend app
